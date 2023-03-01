@@ -77,7 +77,7 @@
 
 .wheel.spinning {
   transition: transform var(--spinning-duration);
-  transform: rotate(calc(var(--nb-turn) * 360deg + (-360deg * var(--selected-item) / (1+ var(--nb-item, 1)))));
+  transform: rotate(calc(var(--nb-turn) * 360deg + (-360deg * var(--selected-item) / var(--nb-item, 1))));
 }
 
 /* Centre de la roue = rond blanc au centre */
@@ -106,7 +106,7 @@
   left: 50%;
   width: 50%;
   transform-origin: center left;
-  transform: translateY(-50%) rotate(calc(var(--item-nb) * (360deg / (var(--nb-item, 1) +1))));
+ transform: translateY(-50%) rotate(calc(var(--item-nb) * (360deg / var(--nb-item, 1))));
 
   /* texte */
   color: var(--neutral-color);
