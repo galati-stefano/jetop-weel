@@ -1,22 +1,11 @@
-import React from "react";
-import { Fragment } from "react";
-
-function Modal({ isOpen, onClose, children }) {
-  const backdropClasses = isOpen
-    ? "fixed inset-0 bg-gray-900 opacity-50 z-50"
-    : "hidden";
-  const modalClasses = isOpen ? "block" : "hidden";
+const Modal = ({ open, children }) => {
+  if (!open) return null;
 
   return (
-    <Fragment>
-      <div className={backdropClasses} onClick={onClose}></div>
-      <div className={modalClasses + " fixed inset-0 z-50"}>
-        <div className="flex items-center justify-center h-screen">
-          <div className="bg-white rounded-lg shadow-lg p-6">{children}</div>
-        </div>
-      </div>
-    </Fragment>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+      <div className="bg-white rounded-md p-6 shadow-lg">{children}</div>
+    </div>
   );
-}
+};
 
 export default Modal;

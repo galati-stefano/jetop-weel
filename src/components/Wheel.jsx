@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import leftArrow from "../assets/left-arrow.png";
-
 import "./weel.css";
+import Modal from "./Modal";
 
 function Wheel(props) {
   const prizes = [
@@ -23,7 +23,7 @@ function Wheel(props) {
 
   const selectItem = () => {
     if (selectedItem === null) {
-      const selectedItem = Math.floor(Math.random() * props.items.length);
+      const selectedItem = Math.floor(Math.random() * items.length);
       if (props.onSelectItem) {
         props.onSelectItem(selectedItem);
       }
@@ -34,7 +34,7 @@ function Wheel(props) {
       const form = document.createElement("form");
       form.method = "POST";
       form.action =
-        "https://script.google.com/a/macros/jetop.com/s/AKfycbyAfKmdQFfYsJTfou75A3egeycFJ_-SJpjjZQ1F12H5lqaYqg_2SjeX71v8CL8_vDY/exec";
+        "https://script.google.com/macros/s/AKfycbwZxBOrp1PSK4-jT7dHev-70VcKmJEfl8CUk3oewQf9KGUgH1w4RPc6udO7LV223BY/exec";
 
       const email = document.createElement("input");
       email.type = "email";
@@ -73,6 +73,7 @@ function Wheel(props) {
     "--nb-item": items.length,
     "--selected-item": selectedItem,
   };
+
   const spinning = selectedItem !== null ? "spinning" : "";
 
   return (
@@ -159,15 +160,5 @@ function Wheel(props) {
     </div>
   );
 }
-
-const Modal = ({ open, children }) => {
-  if (!open) return null;
-
-  return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white rounded-md p-6 shadow-lg">{children}</div>
-    </div>
-  );
-};
 
 export default Wheel;
