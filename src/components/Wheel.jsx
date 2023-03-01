@@ -17,11 +17,9 @@ function Wheel(props) {
 
   const [selectedItem, setSelectedItem] = useState(null);
   const [isOpen, setIsOpen] = useState(true);
-  const [isOpen1, setIsOpen1] = useState(true);
   const [emailSt, setEmail] = useState("");
   const [privacyChecked, setPrivacyChecked] = useState(false);
   const [done, setDone] = useState(false);
-  const [spinned, setSpinned] = useState(false);
 
   const selectItem = () => {
     if (selectedItem === null) {
@@ -33,7 +31,6 @@ function Wheel(props) {
       console.log(selectedItem);
       setSelectedItem(selectedItem);
 
-      setSpinned(true);
       const form = document.createElement("form");
       form.method = "POST";
       form.action =
@@ -63,7 +60,6 @@ function Wheel(props) {
 
       document.body.appendChild(form);
 
-      setIsOpen1(true);
       setTimeout(() => {
         form.submit();
       }, 5000);

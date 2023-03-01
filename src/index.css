@@ -91,11 +91,3 @@ body{
 #spin:hover{
 	box-shadow: none;
 }
-/* .stoper{
-	height: 50px;
-	width: 40px;
-	background: #ffd600;
-	position: absolute;
-	clip-path: polygon(100% 0,50% 100%, 0 0);
-	margin-top: -350px;
-} */

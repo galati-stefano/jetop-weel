@@ -1,5 +1,4 @@
 import React from "react";
-// import Wheel from './components/weel';
 import Wheel from "./components/Wheel";
 
 const App = () => {
@@ -17,7 +16,6 @@ const App = () => {
   return (
     <div>
       <Wheel items={prizes} />
-      {/* <Weel prizes={prizes}/> */}
     </div>
   );
 };
