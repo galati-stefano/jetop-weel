@@ -33,8 +33,11 @@ function Wheel(props) {
 
       const form = document.createElement("form");
       form.method = "POST";
-      form.action =
+      /* form.action =
         "https://script.google.com/macros/s/AKfycbwZxBOrp1PSK4-jT7dHev-70VcKmJEfl8CUk3oewQf9KGUgH1w4RPc6udO7LV223BY/exec";
+      */
+      form.action =
+        "https://script.google.com/macros/s/AKfycbwh4Id0r56JXk93CybWJIeMCj9qoWq5n3s5JFlnePMs3nl4XHYkfcR9YWZ7OBFfkpQ/exec";
 
       const email = document.createElement("input");
       email.type = "email";
