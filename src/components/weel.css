@@ -7,7 +7,8 @@
   --wheel-size: 300px;
   --wheel-slice-spacing: 50px;
   --wheel-border-size: 5px;
-  --wheel-color: #da3768;
+  /* --wheel-color: #da3768; */
+  --wheel-color: #479e9a;
   --neutral-color: white;
   --PI: 3.14159265358979;
   --nb-item: 1;
@@ -28,7 +29,9 @@
   padding: 3px;
   margin: auto;
   background-color: var(--neutral-color);
-  border: solid var(--wheel-color) 3px;
+  border-width: 4px;
+  border-style: solid;
+  border-image: linear-gradient(to right, darkblue, darkorchid) 1;
   border-radius: 50%;
   user-select: none;
 }
@@ -69,6 +72,8 @@
   overflow: hidden;
   border-radius: 50%;
   border: solid var(--wheel-color) var(--wheel-border-size);
+  background:
+              linear-gradient(to right, #479e9a, #b3a4ef) border-box;
   background-color: var(--wheel-color);
   transition: transform var(--reset-duration);
   transform: rotate(0deg);
@@ -115,8 +120,10 @@
     rotate(calc(var(--item-nb) * (360deg / var(--nb-item, 1))));
 
   /* texte */
-  color: var(--neutral-color);
+  /* color: var(--neutral-color); */
+  color: #0e0b07;
   text-align: right;
+  font-weight: 600;
   padding: 0 25px 0 50px;
   font-family: var(--wheel-font);
 }

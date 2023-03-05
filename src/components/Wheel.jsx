@@ -5,12 +5,12 @@ import Modal from "./Modal";
 
 function Wheel(props) {
   const prizes = [
-    "T-Shirt Reply",
-    "Sticker",
+    "👕 T-Shirt Reply",
+    "🚀 Sticker",
+    " J.E.To.P",
+    "✏️ Matita",
     "J.E.To.P",
-    "Matita",
-    "J.E.To.P",
-    "Sticker",
+    "🚀 Sticker",
     "J.E.To.P",
     "Matita",
   ];
@@ -33,11 +33,11 @@ function Wheel(props) {
 
       const form = document.createElement("form");
       form.method = "POST";
-      /* form.action =
-        "https://script.google.com/macros/s/AKfycbwZxBOrp1PSK4-jT7dHev-70VcKmJEfl8CUk3oewQf9KGUgH1w4RPc6udO7LV223BY/exec";
-      */
       form.action =
-        "https://script.google.com/macros/s/AKfycbwh4Id0r56JXk93CybWJIeMCj9qoWq5n3s5JFlnePMs3nl4XHYkfcR9YWZ7OBFfkpQ/exec";
+        "https://script.google.com/macros/s/AKfycbwZxBOrp1PSK4-jT7dHev-70VcKmJEfl8CUk3oewQf9KGUgH1w4RPc6udO7LV223BY/exec";
+      
+      // form.action = "https://script.google.com/macros/s/AKfycbwh4Id0r56JXk93CybWJIeMCj9qoWq5n3s5JFlnePMs3nl4XHYkfcR9YWZ7OBFfkpQ/exec";
+      //   ;
 
       const email = document.createElement("input");
       email.type = "email";
@@ -118,7 +118,7 @@ function Wheel(props) {
             <button
               className={`block mx-auto py-2 px-4 ${
                 privacyChecked
-                  ? "bg-blue-500 hover:bg-blue-700"
+                  ? "bg-gradient-to-l from-purple-300 via-purple-500 to-teal-400"
                   : "bg-slate-400"
               } text-white rounded`}
               onClick={privacyChecked ? () => setDone(true) : null}
